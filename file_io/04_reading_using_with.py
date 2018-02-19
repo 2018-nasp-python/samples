@@ -24,4 +24,5 @@ with open(man_page_path) as man_page_file:
     for line in man_page_file:
         if line == "AUTHOR\n":
             author = man_page_file.readline().strip("Written by ").rstrip(".\n")
+
 print("\n\n The authour was {}".format(author))
