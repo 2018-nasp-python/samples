@@ -14,11 +14,13 @@ Security Emergency: 604-412-7602
 '''
 
 # Use re.search with regex and text to search 
+# note use of re.IGNORECASE flag
 postal_code_match = re.search(r'[A-Z]\d[A-Z] \d[A-Z]\d', contact_info, re.IGNORECASE)
 if postal_code_match:
     print(postal_code_match.group())
 
 # Create a regex object and use it to search 
+# note use of re.IGNORECASE flag
 province_string = r'Alberta|British Columbia|Manitoba|New Brunswick|Newfoundland (and Labrador)?|Nova Scotia|Ontario|Prince Edward Island|Quebec|Saskatchewan|Northwest Territories|Yukon|Nunavut'
 province_re = re.compile(province_string, re.IGNORECASE)
 province_match = province_re.search(contact_info)
@@ -26,7 +28,7 @@ if province_match:
     print(province_match.group())
 
 # Loop over contact info one line at a time
-# Create a regex object and use it to find all matching strings
+# Create a regex object and use it to find first matching string 
 phone_string = r'(?:\d-)?\d{3}-\d{3}-\d{4}'
 phone_re = re.compile(phone_string)
 contact_lines = contact_info.splitlines()
@@ -42,6 +44,7 @@ if phone_nums:
     print(phone_nums)
 
 # Create a regex object and use it to find all matches 
+# loop over these matches
 phone_iter = phone_re.finditer(contact_info)
 if phone_iter:
     for phone in phone_iter:
