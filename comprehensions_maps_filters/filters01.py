@@ -10,7 +10,7 @@ def is_even(num):
 
 def filter_w_function():
     powers_of_three = list(range(3,100,3))
-    even_powers_of_three= list(filter(is_even, powers_of_three))
+    even_powers_of_three = list(filter(is_even, powers_of_three))
     pprint.pprint(even_powers_of_three)
 
 def non_filter_w_function():
