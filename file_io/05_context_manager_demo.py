@@ -39,8 +39,6 @@ class SimpleIntCalcWithCM:
 if __name__ == "__main__":
 
     values = [(10, 2), (4,3), (5,0), ("x", 8)]
-    # with open('myfile.txt', 'r') as my_file:
-    #   do stuff
 
     print("Using calculator using 'with' statement") 
     for value_pair in values:
