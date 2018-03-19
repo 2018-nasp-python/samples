@@ -1,7 +1,5 @@
 #! /usr/bin/env python3
 """Simple script that echoes all of the arguments passed to the script
-
-Invoking this script with 
 """
 
 import sys
