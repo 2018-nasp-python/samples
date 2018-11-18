@@ -1,28 +1,34 @@
 #! /usr/bin/env python3
 import os
-# Get current directory of script
-script_dir = os.path.dirname(__file__)
 
-# Use a file path relative to the executing file so that we always know where 
-# the input is is coming form 
-man_page_path = os.path.join(script_dir, 'example_data', 'uname.txt')
-non_existent_path = os.path.join(script_dir, 'example_data', 'non_existant.txt')
 
-with open(man_page_path) as man_page_file:
-    whole_file_as_string = man_page_file.read()
-print(whole_file_as_string)
+def main():
+    # Get current directory of script
+    script_dir = os.path.dirname(__file__)
 
-with open(man_page_path) as man_page_file:
-    whole_file_line_list = non_existent_file.readlines()
-print(whole_file_line_list)
+    # Use a file path relative to the executing file so that we always know
+    # where the input is is coming form
+    man_page_path = os.path.join(script_dir, 'example_data', 'uname.txt')
 
-with open(man_page_path) as man_page_file:
-    first_line = non_existent_file.readline()
-print(first_line)
+    with open(man_page_path) as man_page_file:
+        whole_file_as_string = man_page_file.read()
+    print(whole_file_as_string)
 
-with open(man_page_path) as man_page_file:
-    for line in man_page_file:
-        if line == "AUTHOR\n":
-            author = man_page_file.readline().strip("Written by ").rstrip(".\n")
+    with open(man_page_path) as man_page_file:
+        whole_file_line_list = man_page_file.readlines()
+    print(whole_file_line_list)
 
-print("\n\n The authour was {}".format(author))
+    with open(man_page_path) as man_page_file:
+        first_line = man_page_file.readline()
+    print(first_line)
+
+    with open(man_page_path) as man_page_file:
+        for line in man_page_file:
+            if line == "AUTHOR\n":
+                author = man_page_file.readline().strip("Written by ").rstrip(".\n")
+
+    print("\n\n The author was {}".format(author))
+
+
+if __name__ == "__main__":
+    main()

@@ -5,6 +5,7 @@ def percentage(total, num):
     percent = (num / total * 100)
     return percent
 
+
 assignment_total = 45
 student_raw_scores = [42, 36, 22, 29, 44, 45, 30]
 
