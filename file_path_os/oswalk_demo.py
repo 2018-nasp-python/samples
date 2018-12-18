@@ -75,4 +75,4 @@ def follow_oswalk(spath):
 
 
 if __name__ == '__main__':
-    follow_oswalk(sys.argv)
+    follow_oswalk(sys.argv[1])

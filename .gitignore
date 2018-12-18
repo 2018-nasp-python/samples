@@ -1,2 +1,10 @@
 *.pyc
 __pycache__
+.idea/libraries/R_User_Library.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/samples.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.mypy_cache
+.ropeproject

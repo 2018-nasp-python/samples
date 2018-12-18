@@ -1,9 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 This script demonstrates the use of default parameter values.
 """
-
 
 def func_w_default_arg_values(arg1=10, arg2=10):
     return arg1 * arg2

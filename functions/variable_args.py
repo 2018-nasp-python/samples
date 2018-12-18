@@ -1,7 +1,6 @@
+#! /usr/bin/env python3
 def variable_args(*args):
     """
-
-
     The asterisk (*) is the important element here, as the word args is the
     established conventional idiom, though it is not enforced by the language
 
@@ -18,9 +17,8 @@ def variable_args(*args):
 
 def variable_kwargs(**kwargs):
     """
-
-    The two asterisks (**) are the important element here, as the word kwargs is
-    conventionally used, though not enforced by the language.
+    The two asterisks (**) are the important element here, as the word kwargs
+    is conventionally used, though not enforced by the language.
 
     Args:
         **kwargs:
@@ -44,6 +42,3 @@ def args_demo():
 
 if __name__ == '__main__':
     args_demo()
-
-
-
